@@ -23,35 +23,82 @@ a:hover {
 }
 
 body {
+  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  background: #e0f7fa;
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
   min-height: 100vh;
+  color: #111;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+h1, h2, h3, h4, h5, h6, p, label, span, div, input, button, a {
+  color: #111 !important;
 }
 
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
   cursor: pointer;
-  transition: border-color 0.25s;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  background: #14b8a6;
+  color: #fff !important;
+  border: none;
+  font-weight: 600;
+  border-radius: 10px;
+  padding: 0.75rem 2rem;
+  box-shadow: 0 2px 8px rgba(20,184,166,0.10);
+  font-size: 1rem;
 }
-button:hover {
-  border-color: #646cff;
+
+button:active {
+  opacity: 0.9;
 }
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+
+input[type="file"] {
+  background: #fff;
+  border: 2px solid #14b8a6;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-top: 1rem;
+  font-size: 1rem;
+  box-shadow: 0 2px 8px rgba(20,184,166,0.07);
+}
+
+/* Modern card styles for all main divs/components */
+.card, .result-card, .modern-card, .ocr-card, .upload-card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(20,184,166,0.10), 0 1.5px 4px rgba(20,184,166,0.08);
+  padding: 2.5rem 2rem;
+  margin: 2rem auto;
+  max-width: 480px;
+  border: 2px solid #14b8a6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+nav {
+  background: #fff;
+  border-bottom: 2px solid #14b8a6;
+  padding: 1rem 0;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 8px rgba(20,184,166,0.05);
+}
+
+nav a {
+  color: #14b8a6 !important;
+  text-decoration: none;
+  font-weight: 500;
+  margin: 0 1rem;
+  transition: color 0.2s;
+  font-size: 1.1rem;
+}
+
+nav a:hover {
+  color: #0f766e !important;
+}
+
+/* Remove Vite/React demo styles if present */
+.read-the-docs, .logo {
+  display: none !important;
 }
 
 @media (prefers-color-scheme: light) {
